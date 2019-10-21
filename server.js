@@ -1,7 +1,6 @@
 var express= require('express');
 var config = require('./libs/config');
 var app=express();
-
 var log = require('./libs/log') (module);
 var path=require('path');
 app.use(express.favicon()); 
@@ -32,7 +31,6 @@ app.get('/api',function (req,res){
     res.send('API is running');
 });
 
-var log = require('./libs/log')(module);
 app.get('/ErrorExample',function(req,res,next){
 next(new Error('Random error!'));
 });
